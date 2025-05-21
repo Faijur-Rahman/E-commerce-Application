@@ -1,4 +1,4 @@
-package com.ecommerce.kanzcart.com.ecommerce.kanzcart.repositories;
+package com.ecommerce.kanzcart.repositories;
 
 import com.ecommerce.kanzcart.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;

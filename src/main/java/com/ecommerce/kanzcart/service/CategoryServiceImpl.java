@@ -1,6 +1,6 @@
 package com.ecommerce.kanzcart.service;
 
-import com.ecommerce.kanzcart.com.ecommerce.kanzcart.repositories.CategoryRepository;
+import com.ecommerce.kanzcart.repositories.CategoryRepository;
 import com.ecommerce.kanzcart.model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
