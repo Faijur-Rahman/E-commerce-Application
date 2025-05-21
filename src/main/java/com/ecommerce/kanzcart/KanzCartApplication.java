@@ -1,4 +1,4 @@
-package com.kanzcart.kanzcart;
+package com.ecommerce.kanzcart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

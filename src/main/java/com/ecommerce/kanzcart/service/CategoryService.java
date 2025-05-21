@@ -1,6 +1,6 @@
-package com.kanzcart.kanzcart.service;
+package com.ecommerce.kanzcart.service;
 
-import com.kanzcart.kanzcart.model.Category;
+import com.ecommerce.kanzcart.model.Category;
 
 import java.util.List;
 

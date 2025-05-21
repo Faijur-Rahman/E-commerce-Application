@@ -1,7 +1,7 @@
-package com.kanzcart.kanzcart.controller;
+package com.ecommerce.kanzcart.controller;
 
-import com.kanzcart.kanzcart.model.Category;
-import com.kanzcart.kanzcart.service.CategoryService;
+import com.ecommerce.kanzcart.model.Category;
+import com.ecommerce.kanzcart.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
