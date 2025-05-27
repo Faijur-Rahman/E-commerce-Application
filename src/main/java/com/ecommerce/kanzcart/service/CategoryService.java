@@ -1,14 +1,13 @@
 package com.ecommerce.kanzcart.service;
 
-import com.ecommerce.kanzcart.model.Category;
-
-import java.util.List;
+import com.ecommerce.kanzcart.payload.CategoryDTO;
+import com.ecommerce.kanzcart.payload.CategoryResponse;
 
 
 public interface CategoryService {
-    List<Category> getAllcategories();
-    void createCategory(Category category);
-    String deleteCategory(Long categoryId);
+    CategoryResponse getAllcategories(Integer pageNumber,Integer pageSize, String sortBy, String sortOrder);
+    CategoryDTO createCategory(CategoryDTO categoryDTO);
+    CategoryDTO deleteCategory(Long categoryId);
 
-    Category updateCategory(Category category, Long categoryId);
+    CategoryDTO updateCategory(CategoryDTO categoryDTO, Long categoryId);
 }
