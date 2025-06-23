@@ -19,7 +19,7 @@ public class Product {
     private Integer quantity;
     private double price; // 100
     private double discount; // 25
-    private double specialPrice; // 75
+    private Double specialPrice; // 75
 
     @ManyToOne
     @JoinColumn(name = "category_id")
