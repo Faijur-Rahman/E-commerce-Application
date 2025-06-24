@@ -3,10 +3,14 @@ package com.ecommerce.kanzcart.controller;
 import com.ecommerce.kanzcart.payload.ProductDTO;
 import com.ecommerce.kanzcart.payload.ProductResponse;
 import com.ecommerce.kanzcart.service.ProductService;
+
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api")
@@ -19,7 +23,7 @@ public class ProductController {
     public ResponseEntity<ProductDTO> addProduct(@RequestBody ProductDTO productDTO,
                                                  @PathVariable Long categoryId) {
         ProductDTO savedproductDTO = productService.addProduct(productDTO, categoryId);
-        return new ResponseEntity<>(productDTO,HttpStatus.CREATED);
+        return new ResponseEntity<>(savedproductDTO,HttpStatus.CREATED);
     }
 
     @GetMapping("/public/products")
@@ -52,6 +56,14 @@ public class ProductController {
     public ResponseEntity<ProductDTO> deleteProduct(@PathVariable Long productId) {
         ProductDTO deletedProductDTO = productService.deleteProduct(productId);
         return new ResponseEntity<>(deletedProductDTO, HttpStatus.OK);
+    }
+
+    @PutMapping("/products/{productId}/image")
+    public ResponseEntity<ProductDTO> updateProductImage(@PathVariable Long productId,
+                                                            @RequestParam("image")MultipartFile image ) throws IOException
+    {
+        ProductDTO updatedProduct = productService.updateProductImage(productId, image) ;
+        return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
     }
 
 }
